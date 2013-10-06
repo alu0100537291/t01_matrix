@@ -12,15 +12,3 @@ def multiplicacion(a, b)
     end
   end
 end
-
-# Suma
-def suma(a, b)
-    n = a.lenght
-    c = Array.new(0) {Array.new(0)}
-
-    for i in 0..(n - 1)
-        for j in 0..(n - 1)
-            c[i][j] += a[i][j] + b[i][j]
-        end
-    end
-end
