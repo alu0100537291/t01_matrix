@@ -3,7 +3,8 @@
 # Multiplicacion
 def multiplicacion(a, b)
   n = a.length
-  c = Array.new(n) { Array.new(n) (0) }
+  c = Array.new(n) { Array.new(n, 0) }
+
   0.upto(n-1) do |i|
     0.upto(n-1) do |j|
       0.upto(n-1) do |k|
@@ -11,16 +12,31 @@ def multiplicacion(a, b)
       end      
     end
   end
+  c
 end
+
 
 # Suma
 def suma(a, b)
-    n = a.lenght
-    c = Array.new(0) {Array.new(0)}
+  n = a.length
+  c = Array.new(n, 0) { Array.new(n, 0) }
 
-    for i in 0..(n - 1)
-        for j in 0..(n - 1)
-            c[i][j] += a[i][j] + b[i][j]
-        end
-    end
+  0.upto(n-1) do |i|
+    0.upto(n-1) do |j|
+          c[i][j] += a[i][j] + b[i][j]
+      end
+  end
+  c
 end
+
+A = [[1, 2, 3], [3, 4, 5], [5, 6, 7]]
+B = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+
+puts "Suma"
+puts suma(A, B)
+
+puts " "
+puts " "
+
+puts "Multiplicacion"
+puts multiplicacion(A, B)
