@@ -19,7 +19,7 @@ end
 # Suma
 def suma(a, b)
   n = a.length
-  c = Array.new(n, 0) { Array.new(n, 0) }
+  c = Array.new(n) { Array.new(n, 0) }
 
   0.upto(n-1) do |i|
     0.upto(n-1) do |j|
